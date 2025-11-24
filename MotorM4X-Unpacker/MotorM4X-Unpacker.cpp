@@ -1,5 +1,3 @@
-#include <fstream>
-
 #include "Includes/Archive.h"
 
 #define VERSION = "1.0";
@@ -17,8 +15,8 @@ void SetMode(const char& pattern, Mode& mode)
     case 'u':
         mode = Mode::unpack;
         return;
-    case 'p':
-        mode = Mode::pack;
+    case 'eo':
+        mode = Mode::encryptOneFile;
         return;
     default:
         mode = Mode::none;

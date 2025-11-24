@@ -9,7 +9,7 @@ const enum Mode
 {
     none = -1,
     unpack = 0,
-    pack = 1
+    encryptOneFile = 1
 };
 
 struct zip_t;
@@ -31,7 +31,7 @@ public:
         case unpack:
             Unpack();
             break;
-        case pack:
+        case encryptOneFile:
             EncryptOneFile();
             break;
         default:

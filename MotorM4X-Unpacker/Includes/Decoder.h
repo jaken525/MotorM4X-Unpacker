@@ -55,6 +55,7 @@ namespace MotorM4X
         }
     }
 
+    // Decompiled code with IDA
     char byte_6126D0[256];
     char byte_612690[256];
 
@@ -136,5 +137,4 @@ namespace MotorM4X
         }
         return byte_612690;
     }
-
 }
