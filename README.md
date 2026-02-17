@@ -16,6 +16,30 @@ Tables that have been found so far:
 | 3885410554 | _master_game.xml2 | Set up for the entire game with a split by scene. (for example: music for each territory and in the main menu) |
 | 2736722086 | sound_table.xml2 | Sounds lol |
 | 1574276988 | car_setup.xml2 | Car settings and texture files |
+| 3732462774 | grass.xml2 | Settings for the grass, field, snow and a likes |
+| 3379029554 | lensflare.xml2 | Lensflares lol |
+| 1472400356 | _material.xml2 | Materials lol |
+| 857797314 | humans.xml2 | Settings for humans and their animations |
+| 160744625 | wheel_particles.xml2 | It's not really necessary to create a full-fledged table |
+| 1742682589 | garage.xml2 | ... |
+| 3909575627 | menu.xml2 | ... |
+| 1940296839 | ingame.xml2 | ... |
+| 1034138367 | menu_pda.xml2 | ... |
+| 1107833686 | menu_options.xml2 | ... |
+| 2526605317 | questioner.xml2 | ... |
+| 396587131 | menu_settings.xml2 | ... |
+| 1368379637 | ride_sounds.xml2 | It's not really necessary to create a full-fledged table |
+| 3639724233 | slip_sounds.xml2 | It's not really necessary to create a full-fledged table |
+| 2746002524 | prices.xml2 | Prices for bets and stars |
+| 3287369807 | camera_settings.xml2 | Settings for cameras |
+| 954124220 | _particles.xml2 | Particles lol |
+| 1318407574 | weather_setup.xml2 | Settings for weather |
+| 2731777293 | tyre_names.xml2 | It's not really necessary to create a full-fledged table |
+| 3203771124 | skids.xml2 | It's not really necessary to create a full-fledged table |
+| 550915094 | tree_setup.xml2 | ... |
+| 3691583168 | tape.xml2 | ... |
+| 1819162635 | atlas.xml2 | ... |
+| 4133041888 | car_tuning.xml2 | ... |
 
 ____
 To find more tables, you can search through OllyDbg.
