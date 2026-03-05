@@ -45,7 +45,6 @@ ____
 All hashes are collected in the [Archive::CollectHashFiles in Archive.cpp](https://github.com/jaken525/MotorM4X-Unpacker/blob/main/MotorM4X-Unpacker/Includes/Archive.cpp#L495)
 
 An example of adding and searching for a file name can be found in the methods used in the function above.
-
 Xml files are usually used, but perhaps the name of the files can be found in other places.
 
 To find more tables, you can search through OllyDbg.
@@ -68,3 +67,4 @@ Final hashing file: __music.xml2__
 # Special Thanks
 - [MotorM4X files decoder](https://aluigi.altervista.org/search.php?src=motorm4x) - by Luigi Auriemma
 - [zip library](https://github.com/kuba--/zip) - by kuba--
+- [pugixml](https://github.com/zeux/pugixml) - by zeux
