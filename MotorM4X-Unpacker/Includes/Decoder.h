@@ -128,6 +128,7 @@ namespace MotorM4X
             v1 = 1;
             ++v3;
         }
+        
         v6 = Hash(byte_6126D0);
         sprintf(byte_612690, "%u", v6);
         if (v1)

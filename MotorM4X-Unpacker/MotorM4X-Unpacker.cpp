@@ -15,8 +15,20 @@ void SetMode(const char& pattern, Mode& mode)
     case 'u':
         mode = Mode::unpack;
         return;
+    case 'ua':
+        mode = Mode::unpackAll;
+        return;
+    case 'pa':
+        mode = Mode::packAll;
+        return;
     case 'eo':
         mode = Mode::encryptOneFile;
+        return;
+    case 'h':
+        mode = Mode::hashFileName;
+        return;
+    case 'b':
+        mode = Mode::resBackups;
         return;
     default:
         mode = Mode::none;
@@ -26,30 +38,42 @@ void SetMode(const char& pattern, Mode& mode)
 
 void ShowMenu(Mode& mode)
 {
-    std::cout << "1. Unpack\n2. Encrypt one file\n\n=> ";
+    std::cout << "MotorM4X - Files unpacker/packer by JaKeN\n\n";
+    std::cout << "0. Exit\n1. Unpack\n2. Encrypt one file\n3. Hash file name\n4. Unpack All\n5. Pack All\n6. Restore Backups\n\n=> ";
     auto input = -1;
     std::cin >> input;
+
+    if (input <= 0)
+    {
+        mode = Mode::none;
+        return;
+    }
 
     mode = static_cast<Mode>(input - 1);
 }
 
 int main(int argc, char* argv[])
 {
-    std::cout << "MotorM4X - Files unpacker/packer by JaKeN\n\n";
-
     std::string inputFile;
     std::string outputFile;
     auto mode = Mode::none;
 
-    switch (argc)
+    while (true)
     {
-    case 2:
-        SetMode((char)argv[1], mode);
-        break;
-    default:
-        ShowMenu(mode);
-        break;
-    }
+        switch (argc)
+        {
+        case 2:
+            SetMode((char)argv[1], mode);
+            break;
+        default:
+            ShowMenu(mode);
+            break;
+        }
 
-    Archive::Start(mode);
+        if (mode == none)
+            return 0;
+
+        system("cls");
+        Archive archive(mode);
+    }
 }

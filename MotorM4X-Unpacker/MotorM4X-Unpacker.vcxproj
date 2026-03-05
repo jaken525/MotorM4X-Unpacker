@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Includes\Archive.cpp" />
     <ClCompile Include="Includes\BinaryStream.cpp" />
+    <ClCompile Include="Includes\pugixml\pugixml.cpp" />
     <ClCompile Include="Includes\zip\zip.c" />
     <ClCompile Include="MotorM4X-Unpacker.cpp" />
   </ItemGroup>
@@ -152,6 +153,8 @@
     <ClInclude Include="Includes\Archive.h" />
     <ClInclude Include="Includes\BinaryStream.h" />
     <ClInclude Include="Includes\Decoder.h" />
+    <ClInclude Include="Includes\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="Includes\pugixml\pugixml.hpp" />
     <ClInclude Include="Includes\Utils.h" />
     <ClInclude Include="Includes\zip\miniz.h" />
     <ClInclude Include="Includes\zip\zip.h" />

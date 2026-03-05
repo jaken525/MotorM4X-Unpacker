@@ -5,9 +5,15 @@
 #include <iomanip>
 #include <shlwapi.h>
 #include <shlobj.h>
+#include <algorithm>
 
 namespace Utils
 {
+	static bool IsDigits(const std::string& line) 
+	{
+		return !line.empty() && std::all_of(line.begin(), line.end(), ::isdigit);
+	}
+
 	static std::string OpenFile()
 	{
 		std::string filename(MAX_PATH, '\0');
@@ -27,7 +33,7 @@ namespace Utils
 		return filename;
 	}
 
-	static std::string OpenDirectory()
+	static std::string OpenDirectory(const std::string& message = "Select Extract Folder")
 	{
 		BROWSEINFO bi{0};
 		TCHAR szDisplayName[MAX_PATH];
@@ -35,7 +41,7 @@ namespace Utils
 		bi.hwndOwner = NULL;
 		bi.pidlRoot = NULL;
 		bi.pszDisplayName = szDisplayName;
-		bi.lpszTitle = "Select Extract Folder";
+		bi.lpszTitle = message.c_str();
 		bi.ulFlags = BIF_RETURNONLYFSDIRS;
 		bi.lParam = NULL;
 		bi.iImage = 0;
@@ -52,38 +58,5 @@ namespace Utils
 		}
 
 		return "";
-	}
-
-
-	static std::string GetFileNameWithExt(const std::string& str)
-	{
-		auto found = str.find_last_of("/\\");
-		const auto strt = found < str.size() ? str.substr(found + 1, -1) : str;
-		
-		return strt;
-	}
-
-	static std::string GetFileName(const std::string& str)
-	{
-		std::string strt = GetFileNameWithExt(str);
-		
-		size_t lastdot = strt.find_last_of(".");
-		if (lastdot == std::string::npos)
-			return strt;
-		return strt.substr(0, lastdot);
-	}
-
-	std::string GetFileExtention(const std::string& str)
-	{
-		const auto lastDot = str.find_last_of(".");
-		if (lastDot == std::string::npos)
-			return str;
-		return str.substr(lastDot, str.length());
-	}
-
-	std::string GetFilePath(const std::string& str)
-	{
-		const auto found = str.find_last_of("/\\");
-		return found != std::string::npos ? (str.substr(0, found) + "\\") : "";
 	}
 }
