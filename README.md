@@ -44,6 +44,12 @@ Tables that have been found so far:
 ____
 To find more tables, you can search through OllyDbg.
 
+All hashes are collected in the [Archive::CollectHashFiles in Archive.cpp](https://github.com/jaken525/MotorM4X-Unpacker/blob/main/MotorM4X-Unpacker/Includes/Archive.cpp#L495)
+
+An example of adding and searching for a file name can be found in the methods used in the function above.
+
+Xml files are usually used, but perhaps the name of the files can be found in other places.
+
 __Instruction manual:__
 1. Load the game into the program and select the MotorM4X module.
 2. Right click -> Search for -> All referenced text strings.
