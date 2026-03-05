@@ -5,7 +5,7 @@ To get the original file name, you need to create a hash table.
 
 DJBA2 is used to hash file names. In theory, all the tables are in the archive table.dtf. All tables use the xml format, but the original file names have the format .xml2
 
-After decryption, you can open the file via notepad++.
+After decryption, you can open the file via notepad++ or another program.
 
 The program has the function "MotorM4X::EncryptName", which returns the hash of the string. You can use it for verification.
 
@@ -42,13 +42,13 @@ Tables that have been found so far:
 | 4133041888 | car_tuning.xml2 | ... |
 
 ____
-To find more tables, you can search through OllyDbg.
-
 All hashes are collected in the [Archive::CollectHashFiles in Archive.cpp](https://github.com/jaken525/MotorM4X-Unpacker/blob/main/MotorM4X-Unpacker/Includes/Archive.cpp#L495)
 
 An example of adding and searching for a file name can be found in the methods used in the function above.
 
 Xml files are usually used, but perhaps the name of the files can be found in other places.
+
+To find more tables, you can search through OllyDbg.
 
 __Instruction manual:__
 1. Load the game into the program and select the MotorM4X module.
